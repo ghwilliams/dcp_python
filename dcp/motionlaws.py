@@ -16,7 +16,7 @@ class Law1994:
             math.cos(2 * math.pi * t / self.L0)) - self.theta)
 
 
-class L1:
+class dcp_L1:
     def __init__(self, L0, e, q, s):
         self.L0 = L0
         self.e = e
