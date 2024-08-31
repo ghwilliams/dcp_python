@@ -5,7 +5,7 @@ import math
 import cmath
 import numpy as np
 
-import dcp
+import dcp_python.dcp.bogoliubov as bogoliubov
 from dcp_python.dcp.base import R as dcp_R
 
 ##
@@ -79,8 +79,8 @@ def NParticles_per_mode(t, n, b, q, Mmax):
     Npart_old = 0
 
     for m in range(Mstart, Mmax + 1):
-        alpha = dcp.bogoliubov.alpha(t, n, m, b, q)
-        beta = dcp.bogoliubov.beta(t, n, m, b, q)
+        alpha = bogoliubov.alpha(t, n, m, b, q)
+        beta = bogoliubov.beta(t, n, m, b, q)
 
         Nm = abs(beta)**2 
         f1 = f1 + (abs(alpha) ** 2 - abs(beta) ** 2)
@@ -110,8 +110,8 @@ def NParticles_per_mode(t, n, b, q, Mmax):
 #      b = 0   -> Dirichlet-Dirichlet
 #      b = 1/2 -> Neumann-Dirichlet
 def NQuanta_per_mode(t, n, m, b, q): 
-    alpha = dcp.bogoliubov.alpha(t, n, m, b, q)
-    beta = dcp.bogoliubov.beta(t, n, m, b, q)
+    alpha = bogoliubov.alpha(t, n, m, b, q)
+    beta = bogoliubov.beta(t, n, m, b, q)
 
     Nm = abs(beta)**2 
 
