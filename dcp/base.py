@@ -47,8 +47,8 @@ import sympy
 """
   Imports of local modules.
 """
-from dcp.numerics import bracket_zero
-from dcp.numerics import dcp_quad
+from dcp_python.dcp.numerics import bracket_zero
+from dcp_python.dcp.numerics import dcp_quad
 
 ##
 # n
