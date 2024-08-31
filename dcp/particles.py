@@ -6,7 +6,7 @@ import cmath
 import numpy as np
 
 import dcp
-from dcp.base import R as dcp_R
+from dcp_python.dcp.base import R as dcp_R
 
 ##
 # Computes the total number of particles for a given

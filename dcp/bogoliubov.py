@@ -6,8 +6,8 @@ import cmath
 import numpy as np
 from scipy.integrate import quad
 
-from dcp.base import R as dcp_R
-from dcp.numerics import dcp_quad
+from dcp_python.dcp.base import R as dcp_R
+from dcp_python.dcp.numerics import dcp_quad
 
 ##
 # Bogoliubov coefficient "alpha"
