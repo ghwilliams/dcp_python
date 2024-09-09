@@ -48,28 +48,32 @@ class dcp_L1:
         self.Tmax = t
 
     def __call__(self, t):
-        if t < 0 or t > self.Tmax:
-            return self.L0
+        if self.Tmax > 0:
+            if t < 0 or t > self.Tmax:
+                return self.L0
 
         return self.L0 * (1. + self.e * math.sin(self.q * math.pi * t / self.L0) ** self.s)
 
     def DL(self, t):
-        if t < 0 or t > self.Tmax:
-            return 0
+        if self.Tmax > 0:
+            if t < 0 or t > self.Tmax:
+                return 0
 
         return self.DL(t)
 
 
     def D2L(self, t):
-        if t < 0 or t > self.Tmax:
-            return 0
+        if self.Tmax > 0:
+            if t < 0 or t > self.Tmax:
+                return 0
         
         return self.D2L(t)
 
 
     def D3L(self, t):
-        if t < 0 or t > self.Tmax:
-            return 0
+        if self.Tmax > 0:
+            if t < 0 or t > self.Tmax:
+                return 0
 
         return self.D3L(t)
 
